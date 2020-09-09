@@ -1,6 +1,13 @@
 .categoryCard {
   background-color: #d6d5d5;
   width: 31%;
-  height: 400px;
-  padding: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.categorycard__title {
+  margin: 10px 15px;
+}
+.categoryCard__productsContainer {
+  display: flex;
+  flex-wrap: wrap;
 }

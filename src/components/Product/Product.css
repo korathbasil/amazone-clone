@@ -2,7 +2,10 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: calc(50% - 30px);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
 }
 .product__ratingContainer {
   display: flex;
@@ -10,4 +13,22 @@
 }
 .product__image {
   width: 100%;
+}
+.product__title {
+  margin: 3px 0;
+}
+.product__priceContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product__price {
+  color: red;
+}
+.product__addCart {
+  padding: 3px;
+  background-color: #ff9900;
+  border-radius: 3px;
+  cursor: pointer;
 }

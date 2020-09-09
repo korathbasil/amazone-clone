@@ -10,9 +10,9 @@ function Product({ name, image, price }) {
         </div>
       </div>
       <img src={image} alt="" className="product__image" />
-      <h5 className="product__title">{name}</h5>
+      <h4 className="product__title">{name}</h4>
       <div className="product__priceContainer">
-        <h5 className="product__price">{price}</h5>
+        <h4 className="product__price">${price}</h4>
         <button className="product__addCart">Add to Cart</button>
       </div>
     </div>
