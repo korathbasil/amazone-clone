@@ -3,8 +3,10 @@ import "./Header.css";
 import Logo from "./amazon-logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { useStateContext } from "../../ContextProvider";
 
 function Header() {
+  const [{ basket }, dispatch] = useStateContext();
   return (
     <div className="header">
       <img className="header__logo" src={Logo} alt="" />
@@ -29,7 +31,7 @@ function Header() {
         </div>
         <div className="header__cartContainer">
           <ShoppingCartIcon />
-          <h2>5</h2>
+          <h2 className="header__cartCounter">{basket.length}</h2>
         </div>
       </div>
     </div>

@@ -3,25 +3,33 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: aqua;
+  background-color: #000000;
+  color: white;
 }
 .header__logo {
-  width: 150px;
+  width: 110px;
   object-fit: contain;
+  margin: 10px 20px;
 }
 .header__search {
   display: flex;
   align-items: center;
   flex: 1;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 2px;
 }
 .header__searchInput {
   flex: 1;
-  height: 30px;
+  height: 35px;
+  border: none;
 }
 .header__searchIconContainer {
-  background-color: brown;
-  width: 30px;
-  height: 30px;
+  background-color: #ff9900;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
 }
 .header__nav {
   display: flex;
@@ -36,6 +44,10 @@
 .header__navItemBottom {
 }
 .header__cartContainer {
+  margin: 0 15px 0 5px;
   display: flex;
   align-items: center;
+}
+.header__cartCounter {
+  margin-left: 3px;
 }
