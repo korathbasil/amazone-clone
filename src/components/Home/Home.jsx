@@ -41,10 +41,7 @@ function Home() {
       <img src={BannerImage} alt="" className="home__bannerImage" />
       <div className="home__banner--gradientModifier"></div>
       <div className="home__contents">
-        <Categorycard
-          category="Amazon Echo"
-          products={[echoProducts[0], echoProducts[1], echoProducts[2]]}
-        />
+        <Categorycard category="Amazon Echo" products={} />
         <Categorycard category="Mobiles" />
         <Categorycard category="Laptops" />
       </div>
