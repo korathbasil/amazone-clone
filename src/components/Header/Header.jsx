@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import Logo from "./amazon-logo.png";
 import SearchIcon from "@material-ui/icons/Search";
@@ -29,10 +30,12 @@ function Header() {
           <p className="header__navItemTop">Try</p>
           <p className="header__NavItemBottom">Prime</p>
         </div>
-        <div className="header__cartContainer">
-          <ShoppingCartIcon />
-          <h2 className="header__cartCounter">{basket.length}</h2>
-        </div>
+        <Link to="/checkout">
+          <div className="header__cartContainer">
+            <ShoppingCartIcon />
+            <h2 className="header__cartCounter">{basket.length}</h2>
+          </div>
+        </Link>
       </div>
     </div>
   );

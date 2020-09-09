@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -9,9 +11,11 @@ import { initialState, reducer } from "./reducer";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ContextProvider initialState={initialState} reducer={reducer}>
-      <App />
-    </ContextProvider>
+    <Router>
+      <ContextProvider initialState={initialState} reducer={reducer}>
+        <App />
+      </ContextProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );

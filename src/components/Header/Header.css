@@ -47,6 +47,10 @@
   margin: 0 15px 0 5px;
   display: flex;
   align-items: center;
+  color: white;
+}
+.header__cartContainer > a {
+  text-decoration: none;
 }
 .header__cartCounter {
   margin-left: 3px;
