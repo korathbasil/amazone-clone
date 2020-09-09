@@ -1,0 +1,13 @@
+.product {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.product__ratingContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.product__image {
+  width: 100%;
+}
