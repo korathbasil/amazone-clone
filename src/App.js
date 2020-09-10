@@ -13,7 +13,6 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        console.log(authUser.displayName);
         dispatch({
           type: "SET_USER",
           email: authUser.email,

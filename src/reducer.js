@@ -8,28 +8,28 @@ export const initialState = {
   echoProducts: [
     {
       name: "Echo dot (3rd Gen)",
-      price: 100,
+      price: 79,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/61EXU8BuGZL._SX679_.jpg",
-      rating: 5,
+      rating: 4,
     },
     {
       name: "Echo Plus (2nd Gen)",
-      price: 100,
+      price: 84,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/61ZJvf5xWBL._SX679_.jpg",
-      rating: 5,
+      rating: 4,
     },
     {
       name: "Echo Input",
-      price: 100,
+      price: 89,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/61qIcidztUL._SX522_.jpg",
-      rating: 5,
+      rating: 3,
     },
     {
       name: "Echo Show 8",
-      price: 100,
+      price: 109,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/51UZ17lvVFL._SX679_.jpg",
       rating: 5,
@@ -37,7 +37,7 @@ export const initialState = {
   ],
   mobileProducts: [
     {
-      name: "iphone 11 pro max (256GB)",
+      name: "Apple iphone 11 pro max",
       price: 1200,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/81j2j9x-KWL._AC_SX679_.jpg",
@@ -45,10 +45,10 @@ export const initialState = {
     },
     {
       name: "Galaxy Note 20 Ultra",
-      price: 100,
+      price: 1099,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/71LanCZhSWL._AC_SX679_.jpg",
-      rating: 5,
+      rating: 4,
     },
     {
       name: "Pixel 4a",
@@ -59,7 +59,7 @@ export const initialState = {
     },
     {
       name: "Sony Xperia 1 II",
-      price: 100,
+      price: 1064,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/81XbJvP97%2BL._AC_SX679_.jpg",
       rating: 5,
