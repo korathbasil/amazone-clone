@@ -48,7 +48,7 @@ export const initialState = {
     },
     {
       name: "Pixel 4a",
-      price: 100,
+      price: 349,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/71Q8gm97H8L._AC_SX679_.jpg",
       rating: 5,
@@ -64,7 +64,7 @@ export const initialState = {
   laptopProducts: [
     {
       name: "Macbook Pro 16",
-      price: 100,
+      price: 2999,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/71L2iBSyyOL._AC_SX679_.jpg",
       rating: 5,
@@ -103,10 +103,12 @@ export const reducer = (state, action) => {
         basket: [...state.basket, action.item],
       };
     case "REMOVE_FROM_CART":
-      const arr = state.basket.splice(action.index, 1);
+      const arr = state.basket;
+      arr.splice(action.index, 1);
       return {
         ...state,
         basket: arr,
+        subTotal: state.subTotal - action.price,
       };
     default:
       return state;

@@ -21,16 +21,20 @@ function Header() {
       </div>
       <div className="header__nav">
         <div className="header__navItems">
-          <p className="header__navItemTop">Hello, Sign in</p>
-          <p className="header__NavItemBottom">Account & Lists</p>
+          <Link to="/signup">
+            <p className="header__navItemTop">Sign up</p>
+          </Link>
+          <Link to="/signin">
+            <p className="header__navItemBottom">Hello,Sign in</p>
+          </Link>
         </div>
         <div className="header__navItems">
           <p className="header__navItemTop">Returns</p>
-          <p className="header__NavItemBottom">& Orders</p>
+          <p className="header__navItemBottom">& Orders</p>
         </div>
         <div className="header__navItems">
           <p className="header__navItemTop">Try</p>
-          <p className="header__NavItemBottom">Prime</p>
+          <p className="header__navItemBottom">Prime</p>
         </div>
         <Link to="/checkout">
           <div className="header__cartContainer">

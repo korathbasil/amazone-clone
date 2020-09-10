@@ -3,13 +3,15 @@ import "./CheckoutProduct.css";
 import { useStateContext } from "../../ContextProvider";
 import Rating from "@material-ui/lab/Rating";
 
-function CheckoutProduct({ name, price, image, rating }) {
+function CheckoutProduct({ name, price, image, rating, index }) {
   const [{ basket, subTotal }, dispatch] = useStateContext();
 
   const removeFromCart = (e) => {
     e.preventDefault();
     dispatch({
       type: "REMOVE_FROM_CART",
+      index,
+      price: price,
     });
   };
   return (

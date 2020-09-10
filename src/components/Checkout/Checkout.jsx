@@ -28,6 +28,7 @@ function Checkout() {
                   price={product.price}
                   image={product.image}
                   rating={product.rating}
+                  index={basket.indexOf(product)}
                 />
               ))}
             </div>
@@ -54,6 +55,22 @@ function Checkout() {
             className="checkout__widgetsTopImage"
           />
         </div>
+        {basket.length > 0 ? (
+          <div className="checkout__widgetMain">
+            <div className="checkout__widgetMainTop">
+              <p>Your order is ligible for FREE Delivery</p>
+            </div>
+            <div className="checkout__widgetMainTotalContainer">
+              <div className="checkout__widgetMainTotal">
+                <p>Subtotal ({basket.length} Items) :</p>
+                <h4>${subTotal}</h4>
+              </div>
+              <button className="checkout__widgetMainCheckoutButton">
+                Proceed to Buy
+              </button>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
