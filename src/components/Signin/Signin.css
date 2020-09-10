@@ -1,0 +1,67 @@
+.signin {
+  width: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signin__logo {
+  width: 200px;
+  height: 60px;
+  object-fit: cover;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.signin__contents {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  margin-bottom: 30px;
+  /* align-items: center; */
+}
+.signin__contents > h1 {
+  font-weight: 400;
+  font-size: 35px;
+}
+.signin__contents > form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.signin__formItem {
+  margin: 5px 0;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+.signin__formItem > input {
+  height: 30px;
+  margin: 5px 0;
+  border-radius: 3px;
+  outline-color: red;
+}
+.signin__formButton {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #f8c24d;
+  margin-top: 10px;
+  border-radius: 3px;
+  outline: none;
+}
+.signin__contents > p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.signin__newToAmazone {
+  margin-bottom: 10px;
+  color: #60c3e4;
+}
+.signin__signupPageButton {
+  padding: 10px;
+  width: 400px;
+  font-size: 18px;
+  border-radius: 3px;
+  outline: none;
+}
