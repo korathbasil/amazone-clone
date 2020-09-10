@@ -44,6 +44,7 @@
 .header__navItemTop {
   font-size: 14px;
   color: white;
+  cursor: pointer;
 }
 .header__navItemBottom {
   font-size: 18px;

@@ -36,9 +36,9 @@ function Header() {
               <p className="header__navItemTop">Sign up</p>
             </Link>
           )}
-          <Link to="/signin">
+          <Link to={!user.email && "signin"}>
             <p className="header__navItemBottom">
-              Hello,{user.displayName ? user.displayName : "sign in"}
+              Hello, {user.displayName ? user.displayName : "sign in"}
             </p>
           </Link>
         </div>
