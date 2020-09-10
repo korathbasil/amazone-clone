@@ -99,7 +99,14 @@ export const reducer = (state, action) => {
     case "ADD_TO_CART":
       return {
         ...state,
+        subTotal: state.subTotal + action.item.price,
         basket: [...state.basket, action.item],
+      };
+    case "REMOVE_FROM_CART":
+      const arr = state.basket.splice(action.index, 1);
+      return {
+        ...state,
+        basket: arr,
       };
     default:
       return state;

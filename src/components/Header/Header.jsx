@@ -10,7 +10,9 @@ function Header() {
   const [{ basket }, dispatch] = useStateContext();
   return (
     <div className="header">
-      <img className="header__logo" src={Logo} alt="" />
+      <Link to="/">
+        <img className="header__logo" src={Logo} alt="" />
+      </Link>
       <div className="header__search">
         <input type="text" className="header__searchInput" />
         <div className="header__searchIconContainer">
