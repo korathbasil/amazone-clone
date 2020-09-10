@@ -113,7 +113,7 @@
 .checkout__widgetMainCheckoutButton {
   width: 80%;
   padding: 10px;
-  background-color: yellow;
+  background-color: rgb(247, 202, 56);
   border: none;
   border-radius: 15px;
   font-weight: 600;

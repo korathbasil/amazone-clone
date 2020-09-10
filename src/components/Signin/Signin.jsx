@@ -1,12 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "./Signin.css";
 import Logo from "./amazon-logo-color.png";
+import { useStateContext } from "../../ContextProvider";
+import { auth } from "../../firebase";
 
 function Signin() {
+  const [{ user }, dispatch] = useStateContext();
+  const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const firebaseSignin = (e) => {
+    e.preventDefault();
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        if (auth) {
+          console.table(auth);
+          setEmail("");
+          setPassword("");
+          history.push("/");
+        }
+      })
+      .catch((e) => alert(e.message));
+  };
   return (
     <div className="signin">
-      <img src={Logo} alt="" className="signin__logo" />
+      <Link to="/">
+        <img src={Logo} alt="" className="signin__logo" />
+      </Link>
       <div className="signin__contents">
         <h1>Login</h1>
         <form>
@@ -16,13 +38,29 @@ function Signin() {
           </label> */}
           <label className="signin__formItem" htmlFor="email">
             E-mail
-            <input type="email" name="email" required />
+            <input
+              type="email"
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              required
+            />
           </label>
           <label className="signin__formItem" htmlFor="password">
             Password
-            <input type="password" name="password" required />
+            <input
+              type="password"
+              name="password"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              required
+            />
           </label>
-          <button className="signin__formButton" type="submit">
+          <button
+            onClick={firebaseSignin}
+            className="signin__formButton"
+            type="submit"
+          >
             Sign in
           </button>
         </form>

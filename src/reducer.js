@@ -1,4 +1,8 @@
 export const initialState = {
+  user: {
+    email: null,
+    displayName: null,
+  },
   subTotal: 0,
   basket: [],
   echoProducts: [
@@ -64,28 +68,28 @@ export const initialState = {
   laptopProducts: [
     {
       name: "Macbook Pro 16",
-      price: 2999,
+      price: 3299,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/71L2iBSyyOL._AC_SX679_.jpg",
       rating: 5,
     },
     {
       name: "Dell XPS 17 9700",
-      price: 100,
+      price: 3999,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/81eAalLexmL._AC_SX679_.jpg",
       rating: 5,
     },
     {
       name: "Razer Blade 17 Pro",
-      price: 100,
+      price: 3050,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/61CsIN1%2ByaL._AC_SX679_.jpg",
       rating: 5,
     },
     {
       name: "ROG zephyrus S17",
-      price: 100,
+      price: 2926,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/61DwoC79tWL._AC_SX679_.jpg",
       rating: 5,
@@ -94,8 +98,16 @@ export const initialState = {
 };
 
 export const reducer = (state, action) => {
-  console.log(action);
   switch (action.type) {
+    case "SET_USER":
+      return {
+        ...state,
+        user: {
+          ...state,
+          email: action.email,
+          displayName: action.displayName,
+        },
+      };
     case "ADD_TO_CART":
       return {
         ...state,

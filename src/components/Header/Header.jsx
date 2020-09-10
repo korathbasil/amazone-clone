@@ -5,9 +5,15 @@ import Logo from "./amazon-logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { useStateContext } from "../../ContextProvider";
+import { auth } from "../../firebase";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateContext();
+  const [{ basket, user }, dispatch] = useStateContext();
+
+  const firebaseSignout = (e) => {
+    e.preventDefault();
+    auth.signOut();
+  };
   return (
     <div className="header">
       <Link to="/">
@@ -21,11 +27,19 @@ function Header() {
       </div>
       <div className="header__nav">
         <div className="header__navItems">
-          <Link to="/signup">
-            <p className="header__navItemTop">Sign up</p>
-          </Link>
+          {user.email ? (
+            <p onClick={firebaseSignout} className="header__navItemTop">
+              SignOut
+            </p>
+          ) : (
+            <Link to="/signup">
+              <p className="header__navItemTop">Sign up</p>
+            </Link>
+          )}
           <Link to="/signin">
-            <p className="header__navItemBottom">Hello,Sign in</p>
+            <p className="header__navItemBottom">
+              Hello,{user.displayName ? user.displayName : "sign in"}
+            </p>
           </Link>
         </div>
         <div className="header__navItems">

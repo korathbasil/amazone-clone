@@ -11,3 +11,12 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media (max-width: 450px) {
+  .categoryCard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

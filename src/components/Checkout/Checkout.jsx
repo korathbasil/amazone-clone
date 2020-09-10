@@ -7,7 +7,7 @@ import Flipmove from "react-flip-move";
 import Header from "../Header/Header";
 
 function Checkout() {
-  const [{ basket, subTotal }, dispatch] = useStateContext();
+  const [{ basket, subTotal, user }, dispatch] = useStateContext();
   return (
     <div className="checkout__wrapper">
       <Header />
@@ -16,7 +16,7 @@ function Checkout() {
           <div className="checkout__bodyHeaderContainer">
             <h2 className="checkout__bodyHeader">Shopping Cart</h2>
             <h4 className="checkout__bodyHeaderGreetings">
-              Hello, John Casillas
+              Hello, {user.displayName}
             </h4>
           </div>
           {basket.length > 0 ? (
