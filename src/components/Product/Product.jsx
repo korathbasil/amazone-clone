@@ -1,8 +1,9 @@
 import React from "react";
 import "./Product.css";
 import { useStateContext } from "../../ContextProvider";
+import Rating from "@material-ui/lab/Rating";
 
-function Product({ name, image, price }) {
+function Product({ name, image, price, rating }) {
   const [{ subTotal }, dispatch] = useStateContext();
 
   const addToCart = (e) => {
@@ -20,7 +21,7 @@ function Product({ name, image, price }) {
     <div className="product">
       <div className="product__ratingContainer">
         <div className="product__rating">
-          <p>5stars</p>
+          <Rating name="read-only" value={rating} size="small" readOnly />
         </div>
       </div>
       <img src={image} alt="" className="product__image" />

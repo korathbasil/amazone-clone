@@ -2,6 +2,7 @@ import React from "react";
 import "./Checkout.css";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import { useStateContext } from "../../ContextProvider";
+import EmptyCartImage from "./empty-cart.png";
 
 function Checkout() {
   const [{ basket, subTotal }, dispatch] = useStateContext();
@@ -26,18 +27,19 @@ function Checkout() {
                   name={product.name}
                   price={product.price}
                   image={product.image}
-                  index="1"
+                  rating={product.rating}
                 />
               ))}
             </div>
             <div className="checkout__bodyMainSubtotalContainer">
               <p>Subtotal ({basket.length} Items) :</p>
-              <h4>{subTotal}</h4>
+              <h4>${subTotal}</h4>
             </div>
           </div>
         ) : null}
         {basket.length < 1 ? (
           <div className="checkout__bodyEmptyCart">
+            <img src={EmptyCartImage} alt="" className="checkout__emptyCart" />
             <h2 className="checkout__emptyCartText">
               Your Shopping Cart is empty.
             </h2>

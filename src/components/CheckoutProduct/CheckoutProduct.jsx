@@ -1,15 +1,15 @@
 import React from "react";
 import "./CheckoutProduct.css";
 import { useStateContext } from "../../ContextProvider";
+import Rating from "@material-ui/lab/Rating";
 
-function CheckoutProduct({ name, price, image, index }) {
+function CheckoutProduct({ name, price, image, rating }) {
   const [{ basket, subTotal }, dispatch] = useStateContext();
 
   const removeFromCart = (e) => {
     e.preventDefault();
     dispatch({
       type: "REMOVE_FROM_CART",
-      index,
     });
   };
   return (
@@ -18,7 +18,7 @@ function CheckoutProduct({ name, price, image, index }) {
         <img src={image} alt="" className="checkoutProduct__image" />
         <div className="checkoutProduct__info">
           <h3 className="checkoutProduct__name">{name}</h3>
-          <p>5Stars</p>
+          {/* <Rating name="read-only" value={rating} readOnly /> */}
           <p className="checkoutProduct__stockText">In Stock</p>
           <p className="checkoutProduct__deliveryText">FREE Delivery</p>
           <button

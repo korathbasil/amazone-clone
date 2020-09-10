@@ -31,6 +31,9 @@
   display: grid;
   place-items: center;
 }
+.header__searchIconContainer > * {
+  color: black;
+}
 .header__nav {
   display: flex;
   align-items: center;
